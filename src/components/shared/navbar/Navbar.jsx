@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end gap-4">
                 <a className="btn btn-success text-white rounded-lg font-semibold text-sm">Sign In</a>
-                <button class="btn btn-accent text-white rounded-lg font-semibold text-sm">Sign Up</button>
+                <button className="btn btn-accent text-white rounded-lg font-semibold text-sm">Sign Up</button>
             </div>
             </div>
         </div>
