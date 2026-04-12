@@ -20,8 +20,33 @@ const BookDetails = () => {
           <div className="divider"></div>
           <p className="font-medium text-xl text-[#13131380]">{targetBook.category}</p>
           <div className="divider"></div>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Listen</button>
+          <p><span className="font-bold">Review: </span><span className="text-[#13131370]">{targetBook.review}</span></p>
+          <div className="flex gap-4 mt-6">
+              <span className="font-bold">Tag</span>
+              {
+                targetBook.tags.map((tag, index)=>{
+                  return <div key={index} className="badge badge-soft text-[#23BE0A] bg-[#23BE0A15] border-none">#{tag}</div>
+                })
+              }
+          </div>
+          <div className="divider"></div>
+          <div className="flex gap-14 mb-8">
+            <div>
+              <p className="mb-3 text-[#13131370]">Number of Pages:</p>
+              <p className="mb-3 text-[#13131370]">Publisher:</p>
+              <p className="mb-3 text-[#13131370]">Year of Publishing:</p>
+              <p className="mb-3 text-[#13131370]">Rating:</p>
+            </div>
+            <div>
+              <p className="font-semibold mb-3">{targetBook.totalPages}</p>
+              <p className="font-semibold mb-3">{targetBook.publisher}</p>
+              <p className="font-semibold mb-3">{targetBook.yearOfPublishing}</p>
+              <p className="font-semibold mb-3">{targetBook.rating}</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <button className="btn bg-white rounded-lg font-semibold text-sm p-5">Read</button>
+            <button className="btn btn-accent text-white rounded-lg font-semibold text-sm">Wishlist</button>
           </div>
         </div>
       </div>
