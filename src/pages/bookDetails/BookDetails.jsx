@@ -8,13 +8,14 @@ const BookDetails = () => {
   return (
     <div className="container mx-auto p-4">
       <div className="card lg:card-side bg-base-100 shadow-sm">
-        <figure>
+        <figure className="bg-[#13131310] lg:w-1/2">
           <img
-            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-            alt="Album"
+            src={targetBook.image}
+            alt={targetBook.bookName}
+            className="w-1/2 h-1/2 object-contain"
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body lg:w-1/2">
           <h2 className="font-bold text-4xl playfair-font mb-4">{targetBook.bookName}</h2>
           <p className="font-medium text-xl text-[#13131380]">By: {targetBook.author}</p>
           <div className="divider"></div>
